@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard | SBDPS</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar"><div class="container">
+  <a class="brand" href="index.html">SBDPS</a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="index.html" >Home</a>
+    <a href="symptoms.html" >Check Symptoms</a>
+    <a href="dashboard.html" aria-current="page">Dashboard</a>
+  </nav>
+</div></header>
+<main>
+<section class="section"><div class="container">
+  <h1>Dashboard</h1>
+  <div id="demo-banner" class="banner" hidden></div>
+  <p id="dash-error" class="error" role="alert"></p>
+  <div id="dashboard">
+    <div class="grid" id="stats"></div>
+    <h2 style="margin-top:2rem">Evaluation metrics</h2>
+    <p id="metrics-note"></p>
+    <div class="grid" id="metrics"></div>
+    <h2 style="margin-top:2rem">Diseases in the dataset</h2>
+    <div class="card"><ul class="chips" id="diseases"></ul></div>
+    <h2 style="margin-top:2rem">Prediction workflow</h2>
+    <div class="card"><ol class="steps">
+      <li>You select symptoms from the structured list.</li>
+      <li>The browser sends them as JSON to <code>POST /api/predict</code>.</li>
+      <li>The backend validates the names and builds a present/absent vector in the training feature order.</li>
+      <li>The Random Forest returns a score for every disease; the top three are sent back.</li>
+      <li>The results page shows them with a disclaimer. Nothing is stored on the server.</li>
+    </ol></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="container">
+  <p>Symptom-Based Disease Prediction System &ndash; academic project. Predictions are preliminary and are not a substitute for professional medical diagnosis.</p>
+</div></footer>
+<script src="js/main.js"></script>
+<script src="js/voice.js"></script>
+<script>loadDashboard();</script>
+</body>
+</html>

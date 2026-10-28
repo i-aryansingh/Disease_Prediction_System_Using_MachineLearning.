@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | SBDPS</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar"><div class="container">
+  <a class="brand" href="index.html">SBDPS</a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="symptoms.html" >Check Symptoms</a>
+    <a href="dashboard.html" >Dashboard</a>
+  </nav>
+</div></header>
+<main>
+<section class="hero"><div class="container">
+  <h1>Symptom-Based Disease Prediction System</h1>
+  <p>Select the symptoms you are experiencing and get a preliminary, machine-learning-based list of possible conditions. Built with the Indian healthcare context in mind, where access to doctors can be limited in rural and remote areas.</p>
+  <a class="btn" href="symptoms.html">Check Symptoms</a>
+</div></section>
+<section class="section"><div class="container">
+  <div id="demo-banner" class="banner" hidden></div>
+  <h2>Key features</h2>
+  <div class="grid">
+    <div class="card"><h3>Structured symptom selection</h3><p>Search and pick symptoms from a fixed list. No accounts and no personal details required.</p></div>
+    <div class="card"><h3>Random Forest prediction</h3><p>A scikit-learn Random Forest model ranks possible diseases and returns up to the top three.</p></div>
+    <div class="card"><h3>Transparent model information</h3><p>The dashboard shows dataset size and evaluation metrics measured on held-out test data.</p></div>
+    <div class="card"><h3>Works on any device</h3><p>Responsive layout for desktop, laptop, tablet and mobile browsers.</p></div>
+  </div>
+</div></section>
+<section class="section" style="padding-top:0"><div class="container">
+  <h2>How machine learning helps</h2>
+  <div class="card"><p>The model is trained on a dataset where each row lists which symptoms are present for a known disease label. During training, a Random Forest builds many decision trees that learn which symptom combinations tend to go with which disease. When you submit symptoms, they are converted into the same present/absent format, and the trees vote. The share of votes for each disease is shown as a model-generated score. These scores are estimates, not medical probabilities.</p></div>
+</div></section>
+<section class="section" style="padding-top:0"><div class="container">
+  <div class="disclaimer"><strong>Medical disclaimer:</strong> This system is for academic demonstration and preliminary information only. It cannot confirm any disease and is not a substitute for professional medical diagnosis. Consult a qualified healthcare professional for any health concern.</div>
+</div></section>
+</main>
+<footer><div class="container">
+  <p>Symptom-Based Disease Prediction System &ndash; academic project. Predictions are preliminary and are not a substitute for professional medical diagnosis.</p>
+</div></footer>
+<script src="js/main.js"></script>
+<script src="js/voice.js"></script>
+<script>loadDemoBanner();</script>
+</body>
+</html>

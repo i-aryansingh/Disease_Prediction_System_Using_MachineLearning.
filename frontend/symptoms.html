@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check Symptoms | SBDPS</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar"><div class="container">
+  <a class="brand" href="index.html">SBDPS</a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="index.html" >Home</a>
+    <a href="symptoms.html" aria-current="page">Check Symptoms</a>
+    <a href="dashboard.html" >Dashboard</a>
+  </nav>
+</div></header>
+<main>
+<section class="section"><div class="container">
+  <h1>Select your symptoms</h1>
+  <div id="demo-banner" class="banner" hidden></div>
+  <div class="layout">
+    <div class="card">
+      <label for="search" class="sr-only">Search symptoms</label>
+      <input id="search" class="search" type="search" placeholder="Search symptoms (e.g. fever)" autocomplete="off">
+      <p id="list-status" aria-live="polite">Loading symptoms&hellip;</p>
+      <fieldset class="symptom-list" id="symptom-list"><legend class="sr-only">Available symptoms</legend></fieldset>
+    </div>
+    <aside class="card" aria-labelledby="sel-h">
+      <h2 id="sel-h" style="font-size:1.2rem">Selected symptoms (<span id="count">0</span>)</h2>
+      <ul class="chips" id="chips"></ul>
+      <p id="empty-note" class="muted" style="color:var(--muted)">No symptoms selected yet.</p>
+      <p id="message" class="error" role="alert"></p>
+      <div class="actions">
+        <button class="btn" id="predict-btn" type="button">Predict</button>
+        <button class="btn secondary" id="reset-btn" type="button">Reset</button>
+      </div>
+    </aside>
+  </div>
+  <div class="disclaimer" style="margin-top:1.2rem">Results are preliminary and not a medical diagnosis. Consult a qualified healthcare professional.</div>
+</div></section>
+</main>
+<footer><div class="container">
+  <p>Symptom-Based Disease Prediction System &ndash; academic project. Predictions are preliminary and are not a substitute for professional medical diagnosis.</p>
+</div></footer>
+<script src="js/main.js"></script>
+<script src="js/voice.js"></script>
+<script src="js/symptoms.js"></script>
+</body>
+</html>
